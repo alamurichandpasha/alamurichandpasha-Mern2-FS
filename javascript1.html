@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript1</title>
+    <script type="text/javascript">
+        function reverseNumber() {
+            var number = document.getElementById("number").value;
+            var reversedNumber = 0;
+            while (number > 0) {
+                reversedNumber = reversedNumber * 10 + number % 10;
+                number = Math.floor(number / 10);
+            }
+            document.getElementById("result").innerHTML = "Reversed number: " + reversedNumber;
+        }
+    </script>
+</head>
+<body>
+    <label for="number">Enter a number: </label>
+    <input type="number" id="number" oninput="reverseNumber()">
+    <p id="result"></p>
+</body>
+</html>
